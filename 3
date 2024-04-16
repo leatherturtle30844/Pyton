@@ -1,0 +1,108 @@
+
+print("     Andar 1")
+print("     Quartos")
+print("  1   2   3   4")
+print("|---|---|   |   |")
+print("     Andar 2")
+print("     Quartos")
+print("  1   2   3   4")
+print("|   |   |---|---|")
+while True:
+    gato = input("Digite o andar e o quarto para o GATO (linha, coluna): ")
+    gato = tuple(map(int, gato.split()))
+    if gato == (1, 4) or gato == (2, 1):
+        break
+    else:
+        print("Posição inválida. Tente novamente.")
+if gato == (1, 4):
+        
+        print("|---|---|   | G |")
+        print("|   |   |---|---|")
+elif gato == (2, 1): 
+    
+        print("|---|---|   |   |")
+        print("| G |   |---|---|")
+        
+while True:
+    rato = input("Digite o andar e o quarto para o RATO (linha, coluna): ")
+    rato = tuple(map(int, rato.split()))
+    if rato == (1, 4) or rato == (2, 1):
+        break
+    else:
+        print("Posição inválida. Tente novamente.")
+
+if rato == (2, 1) and gato == (1, 4):
+    
+        print("|---|---|   | G |")
+        print("| R |   |---|---|")
+elif rato == (1, 4) and gato == (2, 1):
+        print("|---|---|   | R |")
+        print("| G |   |---|---|")
+def marcao():
+    if gato[0] == rato[0]:
+        print("GATO COMEU O RATO")
+    elif gato == (1, 4) and rato == (2, 1):
+        print("passou pela primeira etapa")
+        print("|---|---|   | G |")
+        print("| R |   |---|---|")
+    elif rato == (1, 4) and gato == (2, 1):
+        print("passou pela primeira etapa")
+        print("|---|---|   | R |")
+        print("| G |   |---|---|")
+    else:
+        print("ERRADO")
+marcao()
+
+print("     Andar 1")
+print("     Quartos")
+print("  1   2   3   4")
+print("|---|---|   |   |")
+print("     Andar 2")
+print("     Quartos")
+print("  1   2   3   4")
+print("|   |   |---|---|")
+while True:
+    gato = input("Digite o andar e o quarto para o GATO (linha, coluna): ")
+    gato = tuple(map(int, gato.split()))
+    if gato == (1, 4) or gato == (2, 1):
+        break
+    else:
+        print("Posição inválida. Tente novamente.")
+if gato == (1, 4):
+        
+        print("|---|---|   | G |")
+        print("|   |   |---|---|")
+elif gato == (2, 1): 
+    
+        print("|---|---|   |   |")
+        print("| G |   |---|---|")
+        
+while True:
+    rato = input("Digite o andar e o quarto para o RATO (linha, coluna): ")
+    rato = tuple(map(int, rato.split()))
+    if rato == (1, 4) or rato == (2, 1):
+        break
+    else:
+        print("Posição inválida. Tente novamente.")
+
+if rato == (2, 1) and gato == (1, 4):
+    
+        print("|---|---|   | G |")
+        print("| R |   |---|---|")
+elif rato == (1, 4) and gato == (2, 1):
+        print("|---|---|   | R |")
+        print("| G |   |---|---|")
+def marcao():
+    if gato[0] == rato[0]:
+        print("GATO COMEU O RATO")
+    elif gato == (1, 4) and rato == (2, 1):
+        print("VENCEU")
+        print("|---|---|   | G |")
+        print("| R |   |---|---|")
+    elif rato == (1, 4) and gato == (2, 1):
+        print("VENCEU")
+        print("|---|---|   | R |")
+        print("| G |   |---|---|")
+    else:
+        print("ERRADO")
+marcao()
