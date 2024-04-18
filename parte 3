@@ -1,0 +1,822 @@
+import time
+import os
+
+def mapa1():
+  print("               Lado direito do prédio")
+  print("               Quartos")
+  print("            1   2   3   4")
+  print("          |---|---|   |   |")
+  print("               Lado esquerdo do prédio")
+  print("               Quartos")
+  print("            1   2   3   4")
+  print("          |   |   |---|---|")
+  
+def mapa2():
+  print("               Lado direito do prédio")
+  print("               Quartos")
+  print("            1   2   3   4")
+  print("          |   |---|---|---|")
+  print("               Lado esquerdo do prédio")
+  print("               Quartos")
+  print("            1   2   3   4")
+  print("          |---|   |   |   |")
+
+def mapa3():
+  print("               Lado direito do prédio")
+  print("               Quartos")
+  print("            1   2   3   4")
+  print("          |   |   |---|---|")
+  print("               Lado esquerdo do prédio")
+  print("               Quartos")
+  print("            1   2   3   4")
+  print("          |   | G |   |---|")
+
+def mapa4():
+  print("               Lado direito do prédio")
+  print("               Quartos")
+  print("            1   2   3   4")
+  print("          |   |   |   |---|")
+  print("               Lado esquerdo do prédio")
+  print("               Quartos")
+  print("            1   2   3   4")
+  print("          |---| R |---|---|")
+
+
+def fase2():
+    print("BOORA, fase 2")
+    
+def fase3():
+    print("BOORA, fase 3")
+    
+def fase4():
+    print("BOORA, fase 4")
+    
+def fase5():
+    print("BOORA, fase 5")
+
+
+
+
+print("Fase 1")
+print("")
+print("     Lado direito do prédio")
+print("     Quartos")
+print("  1   2   3   4")
+print("|---|---|   |   |")
+print("     Lado esquerdo do prédio")
+print("     Quartos")
+print("  1   2   3   4")
+print("|   |   |---|---|")
+while True:
+    gato1 = input("Digite o andar e o quarto para o gato1 (linha, coluna): ")
+    gato1 = tuple(map(int, gato1.split()))
+    if gato1 == (1, 4) or gato1 == (2, 1):
+        break
+    elif gato1 == (1, 3) or gato1 == (2, 2):
+        break
+    else:
+        print("Quarto cheio. Tente novamente.")
+    
+if gato1 == (1, 4):
+        
+        print("|---|---|   | G |")
+        print("|   |   |---|---|")
+elif gato1 == (2, 1): 
+    
+        print("|---|---|   |   |")
+        print("| G |   |---|---|")
+elif gato1 == (1, 3):
+        
+        print("|---|---| G |   |")
+        print("|   |   |---|---|")
+elif gato1 == (2, 2): 
+    
+        print("|---|---|   |   |")
+        print("|   | G |---|---|")        
+        
+while True:
+    rato1 = input("Digite o andar e o quarto para o rato1 (linha, coluna): ")
+    rato1 = tuple(map(int, rato1.split()))
+    if rato1 == (2, 1) and gato1 == (1, 4):
+        break
+    elif rato1 == (1, 4) and gato1 == (2, 1):
+        break
+    elif rato1 == (2, 2) and gato1 == (1, 4):
+        break
+    elif rato1 == (1, 4) and gato1 == (2, 2):
+        break
+    elif rato1 == (2, 1) and gato1 == (1, 3):
+        break
+    elif rato1 == (2, 2) and gato1 == (1, 3):
+        break
+    elif rato1 == (2, 1) and gato1 == (1, 4):
+        break
+    elif rato1 == (1, 3) and gato1 == (2, 2):
+        break
+    elif rato1 == (1, 3) and gato1 == (2, 1):
+        break
+    elif rato1 == (1, 4) and gato1 == (2, 1):
+        break
+    elif(rato1 == (2, 1) and gato1 == (2, 2)) or (rato1 == (1, 4) and gato1 == (1, 3)) or (rato1 == (1, 3) and gato1 == (1, 4)) or (rato1 == (2, 2) and gato1 == (2, 1)):
+        print("gato1 COMEU O rato1")
+        print("Tente novamente.")
+    else:
+        print("Quarto cheio. Tente novamente.")
+        
+
+if rato1 == (2, 1) and gato1 == (1, 4):
+    
+        print("|---|---|   | G |")
+        print("| R |   |---|---|")
+elif rato1 == (1, 3) and gato1 == (2, 1):
+    
+        print("|---|---| R |   |")
+        print("| G |   |---|---|")        
+elif rato1 == (1, 4) and gato1 == (2, 1): 
+    
+        print("|---|---|   | R |")
+        print("| G |   |---|---|")    
+elif rato1 == (2, 2) and gato1 == (1, 4):
+    
+        print("|---|---|   | G |")
+        print("|   | R |---|---|")
+        
+elif rato1 == (1, 4) and gato1 == (2, 2):
+        print("|---|---|   | R |")
+        print("|   | G |---|---|")
+        
+elif rato1 == (2, 2) and gato1 == (1, 3):
+    
+        print("|---|---| G |   |")
+        print("|   | R |---|---|")
+elif rato1 == (2, 1) and gato1 == (1, 3):
+    
+        print("|---|---| G |   |")
+        print("| R |   |---|---|")
+        
+elif rato1 == (1, 3) and gato1 == (2, 2):
+        print("|---|---| R |   |")
+        print("|   | G |---|---|")
+        
+
+
+while True:
+    gato2 = input("Digite o andar e o quarto para o gato2 (linha, coluna): ")
+    gato2 = tuple(map(int, gato2.split()))
+    if gato2 == (1, 3) or gato1 == (1, 4):
+        break
+    elif gato2 == (1, 4) and gato1 == (1, 3):
+        break
+    elif gato2 == (2, 1) and gato1 == (2, 2):
+        break
+    elif gato2 ==(2, 2) and gato1 == (2, 1):
+        break
+    elif gato2 == (1, 3) and gato1 == (1, 4):
+        break
+    elif (rato1 == (2, 1) and gato2 == (2, 2)) or (rato1 == (1, 4) and gato2 == (1, 3)) or (rato1 == (1, 3) and gato2 == (1, 4)) or (rato1 == (2, 2) and gato2 == (2, 1)) or (rato1 == (1, 3) and gato2 == (1, 4)):
+        print("gato1 COMEU O rato1")
+        print("Tente novamente.")
+    else:
+        print("Quarto cheio. Tente novamente.")
+
+if gato2 == (1, 3) and gato1 == (1, 4) and rato1 ==(2, 1):
+        time.sleep(5)
+        os.system("cls")  
+        print("|---|---| G | G |")
+        print("| R |   |---|---|")
+        
+elif gato2 == (2, 2) and gato1 == (2, 1)and rato1 ==(1, 4):
+        time.sleep(5)
+        os.system("cls")  
+        print("|---|---|   | R |")
+        print("| G | G |---|---|")
+        
+elif gato2 == (1, 3) and gato1 == (1, 4)and rato1 ==(2, 2):
+        time.sleep(5)
+        os.system("cls")      
+        print("|---|---| G | G |")
+        print("|   | R |---|---|")
+        
+elif gato2 == (1, 4) and gato1 == (1, 3)and rato1 ==(2, 2):
+        time.sleep(5)
+        os.system("cls")      
+        print("|---|---| G | G |")
+        print("|   | R |---|---|")
+        
+elif gato2 == (1, 4) and gato1 == (1, 3)and rato1 ==(2, 1):
+        time.sleep(5)
+        os.system("cls")      
+        print("|---|---| G | G |")
+        print("|   | R |---|---|")
+        
+elif gato2 ==(2, 2) and gato1 == (2, 1)and rato1 ==(1, 3):
+        time.sleep(5)
+        os.system("cls")  
+        print("|---|---| R |   |")
+        print("| G | G |---|---|")
+elif gato2 ==(2, 1) and gato1 == (2, 2)and rato1 ==(1, 4):
+        time.sleep(5)
+        os.system("cls")  
+        print("|---|---| R |   |")
+        print("| G | G |---|---|")   
+elif gato2 ==(2, 2) and gato1 == (2, 1)and rato1 ==(1, 4):
+        time.sleep(5)
+        os.system("cls")  
+        print("|---|---| R |   |")
+        print("| G | G |---|---|")  
+elif gato2 ==(2, 2) and gato1 == (2, 1)and rato1 ==(1, 3):
+        time.sleep(5)
+        os.system("cls")  
+        print("|---|---| R |   |")
+        print("| G | G |---|---|")        
+        
+
+
+while True:
+    rato2 = input("Digite o andar e o quarto para o rato2 (linha, coluna): ")
+    rato2 = tuple(map(int, rato2.split()))
+    if rato2==(2, 2) and gato2 == (1, 3) and rato1 ==(2, 1) and gato1 == (1, 4) or (rato2 == (1, 3) and gato2 == (2, 2) and  rato1 == (1, 4) and gato1 == (2, 1)) or (rato2==(2, 1) and gato2 == (1, 4) and rato1 ==(2, 2) and gato1 == (1, 3)) or (rato2 == (1, 4) and gato2 == (2, 1) and  rato1 == (1, 3) and gato1 == (2, 2)):
+        break
+    else:
+        print("Quarto cheio. Tente novamente.")
+
+if rato2 == (2, 2) and gato2 == (1, 3) and rato1 ==(2, 1) and gato1 == (1, 4) :
+        print("Venceu")
+        print("|---|---| G | G |")
+        print("| R | R |---|---|")
+        fase2()
+        time.sleep(5)
+        os.system("cls")       
+elif rato2 == (1, 3) and gato2 == (2, 2) and  rato1 == (1, 4) and gato1 == (2, 1):
+        print("Venceu")
+        print("|---|---| R | R |")
+        print("| G | G |---|---|")
+        fase2()
+        time.sleep(5)
+        os.system("cls")
+elif rato2 == (1, 3) and gato2 == (2, 1) and  rato1 == (1, 4) and gato1 == (2, 2):
+        print("Venceu")
+        print("|---|---| R | R |")
+        print("| G | G |---|---|") 
+        fase2()
+        time.sleep(5)
+        os.system("cls")
+elif rato2 == (2, 1) and gato2 == (1, 3) and rato1 ==(2, 2) and gato1 == (1, 4) :
+        print("Venceu")
+        print("|---|---| G | G |")
+        print("| R | R |---|---|")
+        fase2()
+        time.sleep(5)
+        os.system("cls")       
+elif rato2 == (1, 4) and gato2 == (2, 2) and  rato1 == (1, 3) and gato1 == (2, 1):
+        print("Venceu")
+        print("|---|---| R | R |")
+        print("| G | G |---|---|")
+        fase2()
+        time.sleep(5)
+        os.system("cls")
+               
+
+def marcao2():
+    if (rato1 == (2, 1) and gato1 == (2, 2)) or \
+       (rato1 == (1, 4) and gato1 == (1, 3)) or \
+       (rato1 == (1, 3) and gato1 == (1, 4)) or \
+       (rato1 == (2, 2) and gato1 == (2, 1)):
+        print("gato1 COMEU O rato1")
+
+    if (rato1 == (2, 1) and gato2 == (2, 2)) or \
+       (rato1 == (1, 4) and gato2 == (1, 3)) or \
+       (rato1 == (1, 3) and gato2 == (1, 4)) or \
+       (rato1 == (2, 2) and gato2 == (2, 1)):
+        print("gato1 COMEU O rato1")
+
+    if (rato2 == (2, 1) and gato1 == (2, 2)) or \
+       (rato2 == (1, 4) and gato1 == (1, 3)) or \
+       (rato2 == (1, 3) and gato1 == (1, 4)) or \
+       (rato2 == (2, 2) and gato1 == (2, 1)):
+        print("gato1 COMEU O rato1")
+
+    if (rato2 == (2, 1) and gato2 == (2, 2)) or \
+       (rato2 == (1, 4) and gato2 == (1, 3)) or \
+       (rato2 == (1, 3) and gato2 == (1, 4)) or \
+       (rato2 == (2, 2) and gato2 == (2, 1)):
+        print("gato1 COMEU O rato1")
+    
+marcao2()
+
+mapa2()
+fase2()
+while True:
+      gato = input("Digite o andar e o quarto para o gato (linha, coluna): ")
+      gato = tuple(map(int, gato.split()))
+      if gato == (2, 2) or gato == (2, 3) or gato == (2, 4) or (1, 1):
+        break
+      else:
+        print("Quarto cheio. Tente novamente.")
+    
+if gato == (2, 2):
+        
+  print("|   |---|---|---|")
+  print("|---| C |   |   |")
+elif gato == (2, 3): 
+    
+  print("|   |---|---|---|")
+  print("|---|   | C |   |")
+elif gato == (2, 4):
+        
+  print("|   |---|---|---|")
+  print("|---|   |   | C |")
+elif gato == (1, 1): 
+    
+  print("| C |---|---|---|")
+  print("|---|   |   |   |")
+  
+while True:
+       cao2 = input("Digite o andar e o quarto para o cão2 (linha, coluna): ")
+       cao2 = tuple(map(int, cao2.split()))
+       if gato == (2, 2) and cao2 == (1, 1):
+        break
+       elif gato == (2, 2) and cao2 == (2, 3):
+        break
+       elif gato == (2, 2) and cao2 == (2, 4):
+        break
+       elif gato == (1, 1) and cao2 == (2, 2):
+        break
+       elif gato == (1, 1) and cao2 == (2, 3):
+        break
+       elif gato == (1, 1) and cao2 == (2, 4):
+        break
+       elif gato == (2, 3) and cao2 == (2, 2):
+        break
+       elif gato == (2, 3) and cao2 == (2, 4):
+        break
+       elif gato == (2, 3) and cao2 == (1, 1):
+        break
+       elif gato == (2, 4) and cao2 == (2, 2):
+        break
+       elif gato == (2, 4) and cao2 == (2, 3):
+        break
+       elif gato == (2, 4) and cao2 == (1, 1):
+        break  
+       else:
+        print("Quarto cheio. Tente novamente.")
+        
+if gato == (2, 2) and cao2 == (1, 1):
+          print("| C |---|---|---|")
+          print("|---| C |   |   |")
+elif gato == (2, 2) and cao2 == (2, 3):
+          print("|   |---|---|---|")
+          print("|---| C | C |   |")
+elif gato == (2, 2) and cao2 == (2, 4):
+          print("|   |---|---|---|")
+          print("|---| C |   | C |")
+elif gato == (1, 1) and cao2 == (2, 2):
+          print("| C |---|---|---|")
+          print("|---| C |   |   |")
+elif gato == (1, 1) and cao2 == (2, 3):
+          print("| C |---|---|---|")
+          print("|---|   | C |   |")
+elif gato == (1, 1) and cao2 == (2, 4):
+          print("| C |---|---|---|")
+          print("|---|   |   | C |")
+elif gato == (2, 3) and cao2 == (2, 2):
+          print("|   |---|---|---|")
+          print("|---| C | C |   |")
+elif gato == (2, 3) and cao2 == (2, 4):
+          print("|   |---|---|---|")
+          print("|---|   | C | C |")
+elif gato == (2, 3) and cao2 == (1, 1):
+          print("| C |---|---|---|")
+          print("|---|   | C |   |")
+elif gato == (2, 4) and cao2 == (2, 2):
+          print("|   |---|---|---|")
+          print("|---| C |   | C |")
+elif gato == (2, 4) and cao2 == (2, 3):
+          print("|   |---|---|---|")
+          print("|---|   | C | C |")
+elif gato == (2, 4) and cao2 == (1, 1):
+          print("| C |---|---|---|")
+          print("|---|   |   | C |")  
+          
+while True:
+       cao3 = input("Digite o andar e o quarto para o cão3 (linha, coluna): ")
+       cao3 = tuple(map(int, cao3.split()))
+       if gato == (2, 2) and cao2 == (1, 1) and cao3 == (2, 3):
+        break
+       elif gato == (2, 2) and cao2 == (1, 1) and cao3 == (2, 4):
+        break
+       elif gato == (2, 2) and cao2 == (2, 3) and cao3 == (2, 4):
+        break
+       elif gato == (2, 2) and cao2 == (2, 3) and cao3 == (1, 1):
+        break
+       elif gato == (2, 2) and cao2 == (2, 4) and cao3 == (2, 3):
+        break
+       elif gato == (2, 2) and cao2 == (2, 4) and cao3 == (1, 1):
+        break
+       elif gato == (1, 1) and cao2 == (2, 2) and cao3 == (2, 3):
+        break
+       elif gato == (1, 1) and cao2 == (2, 2) and cao3 == (2, 4):
+        break
+       elif gato == (1, 1) and cao2 == (2, 3) and cao3 == (2, 2):
+        break
+       elif gato == (1, 1) and cao2 == (2, 3) and cao3 == (2, 4):
+        break
+       elif gato == (1, 1) and cao2 == (2, 4) and cao3 == (2, 2):
+        break
+       elif gato == (1, 1) and cao2 == (2, 4) and cao3 == (2, 3):
+        break
+       elif gato == (2, 3) and cao2 == (2, 2) and cao3 == (1, 1):
+        break
+       elif gato == (2, 3) and cao2 == (2, 2) and cao3 == (2, 4):
+        break
+       elif gato == (2, 3) and cao2 == (2, 4) and cao3 == (1, 1):
+        break
+       elif gato == (2, 3) and cao2 == (2, 4) and cao3 == (2, 2):
+        break
+       elif gato == (2, 3) and cao2 == (1, 1) and cao3 == (2, 4):
+        break
+       elif gato == (2, 3) and cao2 == (1, 1) and cao3 == (2, 2):
+        break
+       elif gato == (2, 4) and cao2 == (2, 2) and cao3 == (1, 1):
+        break
+       elif gato == (2, 4) and cao2 == (2, 2) and cao3 == (2, 3):
+        break
+       elif gato == (2, 4) and cao2 == (2, 3) and cao3 == (1, 1):
+        break
+       elif gato == (2, 4) and cao2 == (2, 3) and cao3 == (2, 2):
+        break
+       elif gato == (2, 4) and cao2 == (1, 1) and cao3 == (2, 3):
+        break
+       elif gato == (2, 4) and cao2 == (1, 1) and cao3 == (2, 2):
+        break  
+       else:
+        print("Quarto cheio. Tente novamente.")
+
+if gato == (2, 2) and cao2 == (1, 1) and cao3 == (2, 3):
+          print("| C |---|---|---|")
+          print("|---| C | C |   |")
+elif gato == (2, 2) and cao2 == (1, 1) and cao3 == (2, 4):
+          print("| C |---|---|---|")
+          print("|---| C |   | C |")
+elif gato == (2, 2) and cao2 == (2, 3) and cao3 == (2, 4):
+          print("|   |---|---|---|")
+          print("|---| C | C | C |")
+elif gato == (2, 2) and cao2 == (2, 3) and cao3 == (1, 1):
+          print("| C |---|---|---|")
+          print("|---| C | C |   |")
+elif gato == (2, 2) and cao2 == (2, 4) and cao3 == (2, 3):
+          print("|   |---|---|---|")
+          print("|---| C | C | C |")
+elif gato == (2, 2) and cao2 == (2, 4) and cao3 == (1, 1):
+          print("| C |---|---|---|")
+          print("|---| C |   | C |")
+elif gato == (1, 1) and cao2 == (2, 2) and cao3 == (2, 3):
+          print("| C |---|---|---|")
+          print("|---| C | C |   |")
+elif gato == (1, 1) and cao2 == (2, 2) and cao3 == (2, 4):
+          print("| C |---|---|---|")
+          print("|---| C |   | C |")
+elif gato == (1, 1) and cao2 == (2, 3) and cao3 == (2, 2):
+          print("| C |---|---|---|")
+          print("|---| C | C |   |")
+elif gato == (1, 1) and cao2 == (2, 3) and cao3 == (2, 4):
+          print("| C |---|---|---|")
+          print("|---|   | C | C |")
+elif gato == (1, 1) and cao2 == (2, 4) and cao3 == (2, 2):
+          print("| C |---|---|---|")
+          print("|---| C |   | C |")
+elif gato == (1, 1) and cao2 == (2, 4) and cao3 == (2, 3):
+          print("| C |---|---|---|")
+          print("|---|   | C | C |")
+elif gato == (2, 3) and cao2 == (2, 2) and cao3 == (1, 1):
+          print("| C |---|---|---|")
+          print("|---| C | C |   |")
+elif gato == (2, 3) and cao2 == (2, 2) and cao3 == (2, 4):
+          print("|   |---|---|---|")
+          print("|---| C | C | C |")
+elif gato == (2, 3) and cao2 == (2, 4) and cao3 == (1, 1):
+          print("| C |---|---|---|")
+          print("|---|   | C | C |")
+elif gato == (2, 3) and cao2 == (2, 4) and cao3 == (2, 2):
+          print("|   |---|---|---|")
+          print("|---| C | C | C |")
+elif gato == (2, 3) and cao2 == (1, 1) and cao3 == (2, 4):
+          print("| C |---|---|---|")
+          print("|---|   | C | C |")
+elif gato == (2, 3) and cao2 == (1, 1) and cao3 == (2, 2):
+          print("| C |---|---|---|")
+          print("|---| C | C |   |")
+elif gato == (2, 4) and cao2 == (2, 2) and cao3 == (1, 1):
+          print("| C |---|---|---|")
+          print("|---|   | C | C |")
+elif gato == (2, 4) and cao2 == (2, 2) and cao3 == (2, 3):
+          print("|   |---|---|---|")
+          print("|---| C | C | C |")
+elif gato == (2, 4) and cao2 == (2, 3) and cao3 == (1, 1):
+          print("| C |---|---|---|")
+          print("|---|   | C | C |")
+elif gato == (2, 4) and cao2 == (2, 3) and cao3 == (2, 2):
+          print("|   |---|---|---|")
+          print("|---| C | C | C |")
+elif gato == (2, 4) and cao2 == (1, 1) and cao3 == (2, 3):
+          print("| C |---|---|---|")
+          print("|---|   | C | C |")
+elif gato == (2, 4) and cao2 == (1, 1) and cao3 == (2, 2):
+          print("| C |---|---|---|")
+          print("|---| C |   | C |")
+while True:
+       osso = input("Digite o andar e o quarto para alocar o osso (linha, coluna): ")
+       osso = tuple(map(int, osso.split()))
+       if gato == (2, 4) and cao2 == (2, 3) and cao3 == (2, 2) and osso ==(1, 1):
+        break
+       elif gato == (2, 4) and cao2 == (2, 2) and cao3 == (2, 3)and osso ==(1, 1):
+        break
+       elif gato == (2, 3) and cao2 == (2, 4) and cao3 == (2, 2)and osso ==(1, 1):
+        break
+       elif gato == (2, 3) and cao2 == (2, 2) and cao3 == (2, 4)and osso ==(1, 1):
+        break
+       elif gato == (2, 2) and cao2 == (2, 4) and cao3 == (2, 3)and osso ==(1, 1):
+        break
+       elif gato == (2, 2) and cao2 == (2, 3) and cao3 == (2, 4)and osso ==(1, 1):
+        break 
+       else:
+        print("Quarto cheio. Tente novamente.")
+
+if gato == (2, 2) and cao2 == (2, 3) and cao3 == (2, 4)and osso ==(1, 1):
+          print("| O |---|---|---|")
+          print("|---| C | C | C |")
+elif gato == (2, 2) and cao2 == (2, 4) and cao3 == (2, 3)and osso ==(1, 1):
+          print("| O |---|---|---|")
+          print("|---| C | C | C |")
+elif gato == (2, 3) and cao2 == (2, 2) and cao3 == (2, 4)and osso ==(1, 1):
+          print("| O |---|---|---|")
+          print("|---| C | C | C |")
+elif gato == (2, 3) and cao2 == (2, 4) and cao3 == (2, 2)and osso ==(1, 1):
+          print("| O |---|---|---|")
+          print("|---| C | C | C |")
+elif gato == (2, 4) and cao2 == (2, 2) and cao3 == (2, 3)and osso ==(1, 1):
+          print("| O |---|---|---|")
+          print("|---| C | C | C |")
+elif gato == (2, 4) and cao2 == (2, 3) and cao3 == (2, 2)and osso ==(1, 1):
+          print("| O |---|---|---|")
+          print("|---| C | C | C |")
+
+
+
+
+fase3()
+mapa3()
+while True:
+      gato22 = input("Digite o andar e o quarto para o gato2 (linha, coluna): ")
+      gato22 = tuple(map(int, gato22.split()))
+      if gato22 == (2, 2) or gato22 == (2, 3) or gato22 == (2, 4) or (1, 1):
+        break
+      else:
+        print("Quarto cheio. Tente novamente.")
+    
+if gato22 == (2, 1):
+        
+  print("|   |   |---|---|")
+  print("| G | G |   |---|")
+elif gato22 == (2, 3): 
+    
+  print("|   |   |---|---|")
+  print("|   | G | G |---|")
+elif gato22 == (1, 2):
+        
+  print("|   | G |---|---|")
+  print("|   | G |   |---|")
+elif gato22 == (1, 1): 
+    
+  print("| G |   |---|---|")
+  print("|   | G |   |---|")
+  
+while True:
+       rato = input("Digite o andar e o quarto para o rato (linha, coluna): ")
+       rato = tuple(map(int, rato.split()))
+       if gato22 == (2, 1) and rato == (1, 1):
+        break
+       elif gato22 == (2, 3) and rato == (1, 2):
+        break
+       elif gato22 == (2, 1) and rato == (1, 3):
+        break
+       elif gato22 == (2, 3) and rato == (1, 2):
+        break
+       elif gato22 == (1, 1) and rato == (2, 3):
+        break
+       elif gato22 == (1, 1) and rato == (2, 4):
+        break
+       elif gato22 == (2, 3) and rato == (2, 2):
+        break
+       elif gato22 == (2, 3) and rato == (2, 4):
+        break
+       elif gato22 == (2, 3) and rato == (1, 1):
+        break
+       elif gato22 == (2, 4) and rato == (2, 2):
+        break
+       elif gato22 == (2, 4) and rato == (2, 3):
+        break
+       elif gato22 == (2, 4) and rato == (1, 1):
+        break  
+       else:
+        print("Quarto cheio. Tente novamente.")
+        
+if gato22 == (2, 2) and rato == (1, 1):
+          print("| C |---|---|---|")
+          print("|---| C |   |   |")
+elif gato22 == (2, 2) and rato == (2, 3):
+          print("|   |---|---|---|")
+          print("|---| C | C |   |")
+elif gato22 == (2, 2) and rato == (2, 4):
+          print("|   |---|---|---|")
+          print("|---| C |   | C |")
+elif gato22 == (1, 1) and rato == (2, 2):
+          print("| C |---|---|---|")
+          print("|---| C |   |   |")
+elif gato22 == (1, 1) and rato == (2, 3):
+          print("| C |---|---|---|")
+          print("|---|   | C |   |")
+elif gato22 == (1, 1) and rato == (2, 4):
+          print("| C |---|---|---|")
+          print("|---|   |   | C |")
+elif gato22 == (2, 3) and rato == (2, 2):
+          print("|   |---|---|---|")
+          print("|---| C | C |   |")
+elif gato22 == (2, 3) and rato == (2, 4):
+          print("|   |---|---|---|")
+          print("|---|   | C | C |")
+elif gato22 == (2, 3) and rato == (1, 1):
+          print("| C |---|---|---|")
+          print("|---|   | C |   |")
+elif gato22 == (2, 4) and rato == (2, 2):
+          print("|   |---|---|---|")
+          print("|---| C |   | C |")
+elif gato22 == (2, 4) and rato == (2, 3):
+          print("|   |---|---|---|")
+          print("|---|   | C | C |")
+elif gato22 == (2, 4) and rato == (1, 1):
+          print("| C |---|---|---|")
+          print("|---|   |   | C |")  
+          
+while True:
+       cao3 = input("Digite o andar e o quarto para o cão3 (linha, coluna): ")
+       cao3 = tuple(map(int, cao3.split()))
+       if gato22 == (2, 2) and rato == (1, 1) and osso == (2, 3):
+        break
+       elif gato22 == (2, 2) and rato == (1, 1) and osso == (2, 4):
+        break
+       elif gato22 == (2, 2) and rato == (2, 3) and osso == (2, 4):
+        break
+       elif gato22 == (2, 2) and rato == (2, 3) and osso == (1, 1):
+        break
+       elif gato22 == (2, 2) and rato == (2, 4) and osso == (2, 3):
+        break
+       elif gato22 == (2, 2) and rato == (2, 4) and osso == (1, 1):
+        break
+       elif gato22 == (1, 1) and rato == (2, 2) and osso == (2, 3):
+        break
+       elif gato22 == (1, 1) and rato == (2, 2) and osso == (2, 4):
+        break
+       elif gato22 == (1, 1) and rato == (2, 3) and osso == (2, 2):
+        break
+       elif gato22 == (1, 1) and rato == (2, 3) and osso == (2, 4):
+        break
+       elif gato22 == (1, 1) and rato == (2, 4) and osso == (2, 2):
+        break
+       elif gato22 == (1, 1) and rato == (2, 4) and osso == (2, 3):
+        break
+       elif gato22 == (2, 3) and rato == (2, 2) and osso == (1, 1):
+        break
+       elif gato22 == (2, 3) and rato == (2, 2) and osso == (2, 4):
+        break
+       elif gato22 == (2, 3) and rato == (2, 4) and osso == (1, 1):
+        break
+       elif gato22 == (2, 3) and rato == (2, 4) and osso == (2, 2):
+        break
+       elif gato22 == (2, 3) and rato == (1, 1) and osso == (2, 4):
+        break
+       elif gato22 == (2, 3) and rato == (1, 1) and osso == (2, 2):
+        break
+       elif gato22 == (2, 4) and rato == (2, 2) and osso == (1, 1):
+        break
+       elif gato22 == (2, 4) and rato == (2, 2) and osso == (2, 3):
+        break
+       elif gato22 == (2, 4) and rato == (2, 3) and osso == (1, 1):
+        break
+       elif gato22 == (2, 4) and rato == (2, 3) and osso == (2, 2):
+        break
+       elif gato22 == (2, 4) and rato == (1, 1) and osso == (2, 3):
+        break
+       elif gato22 == (2, 4) and rato == (1, 1) and osso == (2, 2):
+        break  
+       else:
+        print("Quarto cheio. Tente novamente.")
+
+if gato22 == (2, 2) and rato == (1, 1) and osso == (2, 3):
+          print("| C |---|---|---|")
+          print("|---| C | C |   |")
+elif gato22 == (2, 2) and rato == (1, 1) and osso == (2, 4):
+          print("| C |---|---|---|")
+          print("|---| C |   | C |")
+elif gato22 == (2, 2) and rato == (2, 3) and osso == (2, 4):
+          print("|   |---|---|---|")
+          print("|---| C | C | C |")
+elif gato22 == (2, 2) and rato == (2, 3) and osso == (1, 1):
+          print("| C |---|---|---|")
+          print("|---| C | C |   |")
+elif gato22 == (2, 2) and rato == (2, 4) and osso == (2, 3):
+          print("|   |---|---|---|")
+          print("|---| C | C | C |")
+elif gato22 == (2, 2) and rato == (2, 4) and osso == (1, 1):
+          print("| C |---|---|---|")
+          print("|---| C |   | C |")
+elif gato22 == (1, 1) and rato == (2, 2) and osso == (2, 3):
+          print("| C |---|---|---|")
+          print("|---| C | C |   |")
+elif gato22 == (1, 1) and rato == (2, 2) and osso == (2, 4):
+          print("| C |---|---|---|")
+          print("|---| C |   | C |")
+elif gato22 == (1, 1) and rato == (2, 3) and osso == (2, 2):
+          print("| C |---|---|---|")
+          print("|---| C | C |   |")
+elif gato22 == (1, 1) and rato == (2, 3) and osso == (2, 4):
+          print("| C |---|---|---|")
+          print("|---|   | C | C |")
+elif gato22 == (1, 1) and rato == (2, 4) and osso == (2, 2):
+          print("| C |---|---|---|")
+          print("|---| C |   | C |")
+elif gato22 == (1, 1) and rato == (2, 4) and osso == (2, 3):
+          print("| C |---|---|---|")
+          print("|---|   | C | C |")
+elif gato22 == (2, 3) and rato == (2, 2) and osso == (1, 1):
+          print("| C |---|---|---|")
+          print("|---| C | C |   |")
+elif gato22 == (2, 3) and rato == (2, 2) and osso == (2, 4):
+          print("|   |---|---|---|")
+          print("|---| C | C | C |")
+elif gato22 == (2, 3) and rato == (2, 4) and osso == (1, 1):
+          print("| C |---|---|---|")
+          print("|---|   | C | C |")
+elif gato22 == (2, 3) and rato == (2, 4) and osso == (2, 2):
+          print("|   |---|---|---|")
+          print("|---| C | C | C |")
+elif gato22 == (2, 3) and rato == (1, 1) and osso == (2, 4):
+          print("| C |---|---|---|")
+          print("|---|   | C | C |")
+elif gato22 == (2, 3) and rato == (1, 1) and osso == (2, 2):
+          print("| C |---|---|---|")
+          print("|---| C | C |   |")
+elif gato22 == (2, 4) and rato == (2, 2) and osso == (1, 1):
+          print("| C |---|---|---|")
+          print("|---|   | C | C |")
+elif gato22 == (2, 4) and rato == (2, 2) and osso == (2, 3):
+          print("|   |---|---|---|")
+          print("|---| C | C | C |")
+elif gato22 == (2, 4) and rato == (2, 3) and osso == (1, 1):
+          print("| C |---|---|---|")
+          print("|---|   | C | C |")
+elif gato22 == (2, 4) and rato == (2, 3) and osso == (2, 2):
+          print("|   |---|---|---|")
+          print("|---| C | C | C |")
+elif gato22 == (2, 4) and rato == (1, 1) and osso == (2, 3):
+          print("| C |---|---|---|")
+          print("|---|   | C | C |")
+elif gato22 == (2, 4) and rato == (1, 1) and osso == (2, 2):
+          print("| C |---|---|---|")
+          print("|---| C |   | C |")
+while True:
+       osso = input("Digite o andar e o quarto para alocar o osso (linha, coluna): ")
+       osso = tuple(map(int, osso.split()))
+       if gato22 == (2, 4) and rato == (2, 3) and osso == (2, 2) and osso ==(1, 1):
+        break
+       elif gato22 == (2, 4) and rato == (2, 2) and osso == (2, 3)and osso ==(1, 1):
+        break
+       elif gato22 == (2, 3) and rato == (2, 4) and osso == (2, 2)and osso ==(1, 1):
+        break
+       elif gato22 == (2, 3) and rato == (2, 2) and osso == (2, 4)and osso ==(1, 1):
+        break
+       elif gato22 == (2, 2) and rato == (2, 4) and osso == (2, 3)and osso ==(1, 1):
+        break
+       elif gato22 == (2, 2) and rato == (2, 3) and osso == (2, 4)and osso ==(1, 1):
+        break 
+       else:
+        print("Quarto cheio. Tente novamente.")
+
+if gato22 == (2, 2) and rato == (2, 3) and osso == (2, 4)and osso ==(1, 1):
+          print("| O |---|---|---|")
+          print("|---| C | C | C |")
+elif gato22 == (2, 2) and rato == (2, 4) and osso == (2, 3)and osso ==(1, 1):
+          print("| O |---|---|---|")
+          print("|---| C | C | C |")
+elif gato22 == (2, 3) and rato == (2, 2) and osso == (2, 4)and osso ==(1, 1):
+          print("| O |---|---|---|")
+          print("|---| C | C | C |")
+elif gato22 == (2, 3) and rato == (2, 4) and osso == (2, 2)and osso ==(1, 1):
+          print("| O |---|---|---|")
+          print("|---| C | C | C |")
+elif gato22 == (2, 4) and rato == (2, 2) and osso == (2, 3)and osso ==(1, 1):
+          print("| O |---|---|---|")
+          print("|---| C | C | C |")
+elif gato22 == (2, 4) and rato == (2, 3) and osso == (2, 2)and osso ==(1, 1):
+          print("| O |---|---|---|")
+          print("|---| C | C | C |")
